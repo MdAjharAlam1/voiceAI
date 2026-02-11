@@ -14,7 +14,7 @@ const Description = () => {
                 </p>
             </div>
             <div className="border w-full mt-7 border-gray-200 relative ">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full absolute -top-1 left-38  md:left-90 lg:left-130"></div>
+                <div className="w-2 h-2 bg-indigo-400 rounded-full absolute -top-1 left-40  md:left-90 lg:left-160"></div>
             </div>
         </LayoutContainer>
     </section>
