@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+@keyframes borderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-border-spin {
+  animation: borderSpin 6s linear infinite;
+}
+
+/* Bonus: Hover pause */
+.animate-border-spin-paused {
+  animation-play-state: paused;
+}
+
+/* Usage: group-hover:animate-border-spin-paused */
+
+  
+  
