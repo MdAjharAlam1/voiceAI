@@ -54,14 +54,16 @@ const PricingCard = ({
         <div className="my-2">
             { 
                 price ? (
-                    <div className="flex justify-center">
-                        <span className="text-2xl font-medium text-gray-700">
-                            {currency}
-                        </span>
-                        <span className="text-4xl font-bold text-gray-900">
-                            {price} 
-                        </span>
-                        <span className="text-gray-500 text-sm mb-1">
+                    <div className="flex justify-center items-center gap-2">
+                        <div className="space-x-2">
+                            <span className="text-2xl font-medium text-gray-700">
+                                {currency}
+                            </span>
+                            <span className="text-4xl font-bold text-gray-900">
+                                {price} 
+                            </span>
+                        </div>
+                        <span className="text-gray-500 text-sm mt-2">
                             / {duration}
                         </span>
                     </div>
@@ -79,7 +81,7 @@ const PricingCard = ({
                     features.map((feature:any, index:number)=>(
                         <li key={index} className="flex items-center gap-3 text-gray-600 ">
                             <Check className="text-green-500 w-5 h-5"/>
-                            <span className="text-lg">{feature}</span>
+                            <span className="text-sm">{feature}</span>
                         </li>
                     ))
                 }
