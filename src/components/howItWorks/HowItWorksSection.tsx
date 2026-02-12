@@ -1,6 +1,6 @@
 import LayoutContainer from "../shared/LayoutContainer"
 
-import { Mic, Brain, MessageSquare, ArrowLeft, ArrowDown, ArrowRight } from "lucide-react";
+import { Mic, Brain, MessageSquare, ArrowRight } from "lucide-react";
 import WorkCard from "./WorkCard";
 
 export const workStepsData = [
