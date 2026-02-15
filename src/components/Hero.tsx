@@ -1,8 +1,11 @@
 import phone from "../assets/images/phone.png"
 import Button from "./shared/Button";
 import LayoutContainer from "./shared/LayoutContainer";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative overflow-hidden">
       <LayoutContainer>
@@ -27,8 +30,16 @@ export default function Hero() {
               existing tools and CRM systems.
             </p>
             <div className="flex items-center gap-4">
-              <Button label="Get Started" className="mt-6 px-6 py-2.5 bg-indigo-500 font-medium text-white rounded-lg shadow hover:bg-indigo-600 transition"/>
-              <Button label="Request Demo" className="mt-6 px-6 py-2.5 bg-white text-slate-800 rounded-lg shadow hover:shadow-md transition"/>
+              <Button 
+                onClick={() => navigate("/pricing")}
+                label="Get Started" 
+                className="mt-6 px-6 py-2.5 bg-indigo-500 font-medium text-white rounded-lg shadow hover:bg-indigo-600 transition cursor-pointer"
+              />
+              <Button 
+                onClick={() => navigate("/contact")}
+                label="Request Demo" 
+                className="mt-6 px-6 py-2.5 bg-white text-slate-800 rounded-lg shadow hover:shadow-md transition cursor-pointer"
+              />
             </div>
               
           </div>
