@@ -22,28 +22,28 @@ const Demo = () => {
 
   const sampleTexts: Record<string, { original: string; translated: string }> = {
     spanish: {
-      original: 'Hello, how can I help you today?',
-      translated: 'Hola, ¿cómo puedo ayudarte hoy?'
+      original: 'I need to book a doctor appointment for next Monday at two PM, please.',
+      translated: 'Necesito reservar una cita médica para el próximo lunes a las dos de la tarde, por favor.'
     },
     french: {
-      original: 'Hello, how can I help you today?',
-      translated: 'Bonjour, comment puis-je vous aider aujourd\'hui?'
+      original: 'I would like information about your customer support services and pricing plans.',
+      translated: 'J\'aimerais des informations sur vos services de support client et vos plans tarifaires.'
     },
     german: {
-      original: 'Hello, how can I help you today?',
-      translated: 'Hallo, wie kann ich dir heute helfen?'
+      original: 'Can you help me with the voice translation feature and how it works in real time?',
+      translated: 'Können Sie mir bei der Sprachübersetzungsfunktion helfen und wie sie in Echtzeit funktioniert?'
     },
     japanese: {
-      original: 'Hello, how can I help you today?',
-      translated: 'こんにちは、今日はどのようにお手伝いできますか?'
+      original: 'I want to schedule a meeting with your doctor next Friday afternoon.',
+      translated: '来週の金曜日の午後、医者との会議をスケジュールしたいです。'
     },
     mandarin: {
-      original: 'Hello, how can I help you today?',
-      translated: '你好，我今天能如何帮助你？'
+      original: 'Please tell me about your appointment booking system and available time slots.',
+      translated: '请告诉我关于您的预约预订系统和可用的时间段。'
     },
     portuguese: {
-      original: 'Hello, how can I help you today?',
-      translated: 'Olá, como posso ajudá-lo hoje?'
+      original: 'I am interested in booking a consultation for my medical needs this week.',
+      translated: 'Estou interessado em agendar uma consulta para minhas necessidades médicas esta semana.'
     }
   };
 
@@ -183,6 +183,62 @@ const Demo = () => {
                 <p className="text-slate-600 font-medium">Click the button above and start speaking</p>
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Recent Translations Section */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Recent Translations from Our Users</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                from: 'I would like to schedule an appointment with Dr. Smith next Tuesday',
+                to: 'Me gustaría programar una cita con el Dr. Smith el próximo martes',
+                lang: 'Spanish',
+                user: 'Sarah Johnson'
+              },
+              {
+                from: 'What time slots are available for the medical consultation?',
+                to: 'Quels créneaux horaires sont disponibles pour la consultation médicale?',
+                lang: 'French',
+                user: 'Michael Chen'
+              },
+              {
+                from: 'Please confirm my appointment details and send confirmation email',
+                to: 'Bitte bestätigen Sie meine Termindetails und senden Sie eine Bestätigungsemail',
+                lang: 'German',
+                user: 'Emma Mueller'
+              },
+              {
+                from: 'I need to reschedule my doctor appointment to next week',
+                to: '来週に医者の診察時間をスケジュール変更する必要があります',
+                lang: 'Japanese',
+                user: 'David Park'
+              },
+              {
+                from: 'Can I book a video consultation instead of in-person visit?',
+                to: '亲自就诊而不是视频咨询，我可以预约吗？',
+                lang: 'Mandarin',
+                user: 'Lisa Wong'
+              },
+              {
+                from: 'What is the cancellation policy for medical appointments?',
+                to: 'Qual é a política de cancelamento para consultas médicas?',
+                lang: 'Portuguese',
+                user: 'Carlos Silva'
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">{item.lang}</span>
+                  <span className="text-xs text-slate-500">{item.user}</span>
+                </div>
+                <p className="text-sm text-slate-700 mb-3 italic">{item.from}</p>
+                <div className="border-t border-slate-200 pt-3">
+                  <p className="text-sm text-green-700 font-medium">{item.to}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

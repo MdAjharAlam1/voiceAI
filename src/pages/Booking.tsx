@@ -379,6 +379,33 @@ const Booking = () => {
                 </button>
               )}
 
+              {/* Example Booking Preview */}
+              <div className="mb-8 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-200">
+                <h3 className="text-sm font-semibold text-indigo-900 mb-4">Example of a Completed Booking</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="bg-white rounded p-3">
+                    <p className="text-slate-600 text-xs">Name</p>
+                    <p className="font-semibold text-slate-900">Sarah Johnson</p>
+                  </div>
+                  <div className="bg-white rounded p-3">
+                    <p className="text-slate-600 text-xs">Doctor</p>
+                    <p className="font-semibold text-slate-900">Dr. Emily Rodriguez</p>
+                  </div>
+                  <div className="bg-white rounded p-3">
+                    <p className="text-slate-600 text-xs">Date</p>
+                    <p className="font-semibold text-slate-900">Jan 25, 2024</p>
+                  </div>
+                  <div className="bg-white rounded p-3">
+                    <p className="text-slate-600 text-xs">Time</p>
+                    <p className="font-semibold text-slate-900">2:00 PM</p>
+                  </div>
+                  <div className="bg-white rounded p-3 col-span-2">
+                    <p className="text-slate-600 text-xs">Type</p>
+                    <p className="font-semibold text-slate-900">Full Product Demo (1 hour)</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Form */}
               <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-lg p-8 mb-12">
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">Appointment Details</h2>
@@ -544,6 +571,96 @@ const Booking = () => {
                   <div className="mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
                   <p className="text-slate-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Recent Bookings Section */}
+          <div className="py-16 mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Recent Appointments Booked</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: 'Sarah Johnson',
+                  doctor: 'Dr. James Mitchell',
+                  date: 'Jan 22, 2024',
+                  time: '2:00 PM',
+                  type: 'Product Consultation',
+                  status: 'Confirmed'
+                },
+                {
+                  name: 'Michael Chen',
+                  doctor: 'Dr. Emily Rodriguez',
+                  date: 'Jan 23, 2024',
+                  time: '10:00 AM',
+                  type: 'Full Product Demo',
+                  status: 'Confirmed'
+                },
+                {
+                  name: 'Emma Mueller',
+                  doctor: 'Dr. David Park',
+                  date: 'Jan 24, 2024',
+                  time: '3:30 PM',
+                  type: 'Trial Setup',
+                  status: 'Pending'
+                },
+                {
+                  name: 'Lisa Wong',
+                  doctor: 'Dr. Susan Thompson',
+                  date: 'Jan 25, 2024',
+                  time: '1:00 PM',
+                  type: 'Team Training',
+                  status: 'Confirmed'
+                },
+                {
+                  name: 'Carlos Silva',
+                  doctor: 'Dr. James Mitchell',
+                  date: 'Jan 26, 2024',
+                  time: '11:00 AM',
+                  type: 'Product Consultation',
+                  status: 'Confirmed'
+                },
+                {
+                  name: 'David Park',
+                  doctor: 'Dr. Anna Johnson',
+                  date: 'Jan 27, 2024',
+                  time: '4:00 PM',
+                  type: 'Full Product Demo',
+                  status: 'Confirmed'
+                }
+              ].map((booking, idx) => (
+                <div key={idx} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="font-semibold text-slate-900">{booking.name}</h3>
+                      <p className="text-sm text-slate-600">with {booking.doctor}</p>
+                    </div>
+                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                      booking.status === 'Confirmed' 
+                        ? 'bg-green-100 text-green-700' 
+                        : 'bg-yellow-100 text-yellow-700'
+                    }`}>
+                      {booking.status}
+                    </span>
+                  </div>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{booking.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{booking.time}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span className="text-indigo-600 font-medium">{booking.type}</span>
+                    </div>
+                  </div>
+                  <button className="w-full py-2 px-4 border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 transition font-medium text-sm">
+                    View Details
+                  </button>
                 </div>
               ))}
             </div>
