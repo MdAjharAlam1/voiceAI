@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import phone from "../assets/images/phone.png"
 import Button from "./shared/Button";
 import LayoutContainer from "./shared/LayoutContainer";
@@ -27,7 +28,9 @@ export default function Hero() {
               existing tools and CRM systems.
             </p>
             <div className="flex items-center gap-4">
-              <Button label="Get Started" className="mt-6 px-6 py-2.5 bg-indigo-500 font-medium text-white rounded-lg shadow hover:bg-indigo-600 transition"/>
+              <Link to="/voice-translator">
+                <Button label="Get Started" className="mt-6 px-6 py-2.5 bg-indigo-500 font-medium text-white rounded-lg shadow hover:bg-indigo-600 transition"/>
+              </Link>
               <Button label="Request Demo" className="mt-6 px-6 py-2.5 bg-white text-slate-800 rounded-lg shadow hover:shadow-md transition"/>
             </div>
               

@@ -1,26 +1,23 @@
 
 import ContactUs from "../components/ContactUs"
 import Description from "../components/Description"
-import Footer from "../components/Footer"
+
 import Hero from "../components/Hero"
 import HowItWorksSection from "../components/howItWorks/HowItWorksSection"
-// import HowItWorks from "../components/HowItWorks"
 
-import Navbar from "../components/Navbar"
+
 import PricingSection from "../components/pricing/PricingSection"
-import Features from "../components/voice-features/Features"
+import FeatureSection from "../components/voice-features/FeatureSection"
 
 const Home = () => {
   return (
     <div className="h-full">
-       <Navbar/>
        <Hero/>
        <Description/>
-       <Features/>
+       <FeatureSection title="Key Features"/>
        <HowItWorksSection/>
        <PricingSection/>
        <ContactUs/>
-       <Footer/>
     </div>
   )
 }

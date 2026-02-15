@@ -1,13 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
+import Pricing from "./pages/Pricing"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Contact from "./pages/Contact"
+import Features from "./pages/Features"
+import VoiceTranslator from "./pages/VoiceTranslator"
 
 const App = () => {
   return (
-   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-    </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/pricing" element={<Pricing/>}/>
+        <Route path="/contact-us" element={<Contact/>}/>
+        <Route path="/features" element={<Features/>}/>
+        <Route path="/voice-translator" element={<VoiceTranslator/>}/>
+      </Routes>
+
+      <Footer/>
+    </BrowserRouter>
   )
 }
 

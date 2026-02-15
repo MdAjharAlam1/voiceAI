@@ -55,36 +55,39 @@ const pricingPlansData = [
 ];
 
 
+
+
+
 const PricingSection = () => {
   return (
     // bg-linear-to-b from-blue-50 to-white
     <section className="py-10 bg-linear-to-b from-blue-50 to-white ">
       <LayoutContainer>
         <div>
-            <div className="text-center">
-                <h2 className="text-3xl font-bold">
-                    Pricing
-                </h2>
-                <div className="w-20 mx-auto h-1 bg-blue-500 mt-3 rounded-full"></div>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold">
+              Pricing
+            </h2>
+            <div className="w-20 mx-auto h-1 bg-blue-500 mt-3 rounded-full"></div>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20  md:gap-10 mt-10 md:mt-20">
-                {
-                    pricingPlansData && pricingPlansData.map((pricing)=>(
-                        <PricingCard
-                            key={pricing.id}
-                            name={pricing.name}
-                            description={pricing.description}
-                            buttonText={pricing.buttonText}
-                            features={pricing.features}
-                            price={pricing.price}
-                            currency={pricing.currency}
-                            isPopular={pricing.isPopular}
-                            duration={pricing.duration}
-                        />
-                    ))
-                }
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20  md:gap-10 mt-10 md:mt-20">
+            {
+              pricingPlansData && pricingPlansData.map((pricing)=>(
+                <PricingCard
+                  key={pricing.id}
+                  name={pricing.name}
+                  description={pricing.description}
+                  buttonText={pricing.buttonText}
+                  features={pricing.features}
+                  price={pricing.price}
+                  currency={pricing.currency}
+                  isPopular={pricing.isPopular}
+                  duration={pricing.duration}
+                />
+              ))
+            }
+          </div>
         </div>
       </LayoutContainer>
     </section>
