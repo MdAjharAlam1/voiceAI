@@ -3,6 +3,8 @@ import Home from "./pages/Home"
 import Features from "./pages/Features"
 import Pricing from "./pages/Pricing"
 import Contact from "./pages/Contact"
+import Demo from "./pages/Demo"
+import Booking from "./pages/Booking"
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Route path="/features" element={<Features/>}/>
       <Route path="/pricing" element={<Pricing/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/demo" element={<Demo/>}/>
+      <Route path="/booking" element={<Booking/>}/>
     </Routes>
    </BrowserRouter>
   )

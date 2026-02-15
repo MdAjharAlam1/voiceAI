@@ -15,7 +15,9 @@ const Navbar = () => {
                     <div className='hidden sm:flex font-medium items-center gap-6 text-slate-600'>
                         <Link className='hover:underline hover:text-blue-400' to="/">Home</Link>
                         <Link className='hover:underline hover:text-blue-400' to="/features">Features</Link>
+                        <Link className='hover:underline hover:text-blue-400' to="/demo">Demo</Link>
                         <Link className='hover:underline hover:text-blue-400' to="/pricing">Pricing</Link>
+                        <Link className='hover:underline hover:text-blue-400' to="/booking">Booking</Link>
                         <Link className='hover:underline hover:text-blue-400' to="/contact">Contact</Link>
                     </div>
                     
@@ -38,7 +40,9 @@ const Navbar = () => {
                     <div className='flex flex-col font-medium px-6 py-6 gap-6 text-slate-600 text-lg'>
                         <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/">Home</Link>
                         <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/features">Features</Link>
+                        <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/demo">Demo</Link>
                         <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/pricing">Pricing</Link>
+                        <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/booking">Booking</Link>
                         <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to="/contact">Contact</Link>
                     </div>
                 </div>
