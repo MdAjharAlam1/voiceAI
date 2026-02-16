@@ -112,6 +112,14 @@ const BookingAppointment = () => {
   const [aiResponse, setAiResponse] = useState('');
   const [isSpeaking, setIsSpeaking] = useState(false);
 
+  const handleCancel = ()=>{
+    setIsListening(false)
+    setVoiceTranscript('')
+    setConversationStep(0)
+    setAiResponse('')
+    setIsSpeaking(false)
+  }
+
   if (submitted) {
     return (
       <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-blue-50">
@@ -174,7 +182,7 @@ const BookingAppointment = () => {
 
               {/* Mic Button */}
               <button
-                onClick={() => setIsListening(!isListening)}
+                onClick={handleCancel}
                 className={`w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition text-white ${
                   isListening ? 'bg-red-500 hover:bg-red-600' : 'bg-indigo-600 hover:bg-indigo-700'
                 }`}
