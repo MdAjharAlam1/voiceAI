@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import Contact from "./pages/Contact"
 import Features from "./pages/Features"
 import VoiceTranslator from "./pages/VoiceTranslator"
+import BookAppointment from "./pages/BookAppointment"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/contact-us" element={<Contact/>}/>
         <Route path="/features" element={<Features/>}/>
         <Route path="/voice-translator" element={<VoiceTranslator/>}/>
+        <Route path="/book-appointment" element={<BookAppointment/>}/>
       </Routes>
 
       <Footer/>

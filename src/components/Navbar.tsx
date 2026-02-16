@@ -69,7 +69,7 @@ const Navbar = () => {
                     <div className='flex flex-col font-medium px-6 py-6 gap-6 text-slate-600 text-lg'>
                         {
                             NavLink.map((nav,index)=>(
-                                <Link onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to={nav.href}>{nav.label}</Link>
+                                <Link key={index} onClick={()=> setOpen(false)} className='hover:underline hover:text-blue-400' to={nav.href}>{nav.label}</Link>
 
                             ))
                         }
